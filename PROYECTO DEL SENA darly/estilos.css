@@ -1,0 +1,675 @@
+/* =========================================================
+   CONFIGURACIÓN GENERAL
+========================================================= */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Trebuchet MS", Arial, sans-serif;
+    background: #fff8fa;
+    color: #4a2631;
+    line-height: 1.6;
+}
+
+
+/* =========================================================
+   ENCABEZADO - TODAS LAS PÁGINAS
+========================================================= */
+
+header {
+    width: 100%;
+    min-height: 95px;
+    background: linear-gradient(135deg, #6e1735, #9f3155);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 6%;
+    box-shadow: 0 4px 15px rgba(80, 20, 40, 0.20);
+}
+
+
+/* LOGO */
+
+#logo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+#empresa {
+    color: white;
+    font-size: 28px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+#fotologo {
+    width: 70px;
+    height: 70px;
+    object-fit: cover;
+    border-radius: 50%;
+    border: 3px solid white;
+    transition: transform 0.3s ease;
+}
+
+#fotologo:hover {
+    transform: scale(1.08);
+}
+
+
+/* NAVEGACIÓN */
+
+#navegacion {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+#navegacion li a {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 10px 15px;
+    border-radius: 20px;
+    transition: 0.3s ease;
+}
+
+#navegacion li a:hover {
+    background: #f5b6c8;
+    color: #6e1735;
+}
+
+
+/* =========================================================
+   FOOTER - TODAS LAS PÁGINAS
+========================================================= */
+
+footer {
+    margin-top: 50px;
+    min-height: 130px;
+    background: #541328;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 12px;
+    padding: 25px;
+}
+
+#final {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+#iconos {
+    display: flex;
+    gap: 22px;
+}
+
+#iconos i {
+    cursor: pointer;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+#iconos i:hover {
+    transform: scale(1.25);
+    color: #f5a9bf;
+}
+
+
+/* =========================================================
+   INICIO
+========================================================= */
+
+#principal {
+    width: 88%;
+    max-width: 1200px;
+    min-height: 500px;
+    margin: 55px auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+#info1 {
+    flex: 1;
+}
+
+#info1 h1 {
+    font-size: 48px;
+    line-height: 1.15;
+    color: #6e1735;
+    margin-bottom: 20px;
+}
+
+#texto1 {
+    font-size: 21px;
+    color: #704553;
+    max-width: 550px;
+    margin-bottom: 30px;
+}
+
+
+/* IMAGEN PRINCIPAL */
+
+#foto-principal {
+    width: 450px;
+    height: 450px;
+    object-fit: cover;
+    border-radius: 35% 65% 60% 40% / 45% 40% 60% 55%;
+    box-shadow: 0 12px 30px rgba(100, 30, 50, 0.22);
+    transition: transform 0.5s ease;
+}
+
+#foto-principal:hover {
+    transform: scale(1.06);
+}
+
+
+/* BOTÓN PRINCIPAL */
+
+#boton {
+    border: none;
+    background: #8e2748;
+    border-radius: 25px;
+    padding: 14px 30px;
+    cursor: pointer;
+    transition: 0.3s ease;
+    box-shadow: 0 5px 12px rgba(100, 30, 50, 0.20);
+}
+
+#boton a {
+    color: white;
+    text-decoration: none;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+#boton:hover {
+    background: #e27a9b;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   TIENDAS
+========================================================= */
+
+#pagina_tiendas {
+    width: 90%;
+    max-width: 1250px;
+    margin: 50px auto;
+}
+
+#titulo-tiendas {
+    text-align: center;
+    font-size: 40px;
+    color: #6e1735;
+    margin-bottom: 40px;
+}
+
+#contenedor-tiendas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.productos {
+    background: white;
+    padding: 25px;
+    border-radius: 28px;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(80, 20, 40, 0.12);
+    border: 1px solid #f1cbd6;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.productos:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 12px 28px rgba(80, 20, 40, 0.18);
+}
+
+
+/* IMÁGENES DE LAS TIENDAS */
+
+.foto-tiendas {
+    width: 230px;
+    height: 170px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 18px;
+    transition: transform 0.4s ease;
+}
+
+.foto-tiendas:hover {
+    transform: scale(1.12);
+}
+
+.productos h2 {
+    color: #7a1e3d;
+    margin-bottom: 12px;
+}
+
+.productos p {
+    margin-bottom: 7px;
+    color: #65434d;
+}
+
+.boton {
+    margin-top: 15px;
+    border: none;
+    background: #8e2748;
+    border-radius: 22px;
+    padding: 11px 25px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.boton a {
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.boton:hover {
+    background: #e27a9b;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   GALERÍA
+========================================================= */
+
+#galeria {
+    width: 90%;
+    max-width: 1200px;
+    margin: 45px auto;
+}
+
+#introduccion-galeria {
+    text-align: center;
+    margin-bottom: 35px;
+}
+
+#introduccion-galeria p {
+    font-size: 21px;
+    color: #704553;
+}
+
+#imagenes > h1 {
+    text-align: center;
+    color: #6e1735;
+    font-size: 40px;
+    margin-bottom: 35px;
+}
+
+.emprendimiento {
+    background: white;
+    margin-bottom: 35px;
+    padding: 30px;
+    border-radius: 30px;
+    text-align: center;
+    box-shadow: 0 7px 20px rgba(80, 20, 40, 0.12);
+    border: 1px solid #f1cbd6;
+}
+
+.emprendimiento h2 {
+    color: #7a1e3d;
+    margin-bottom: 25px;
+    font-size: 28px;
+}
+
+.galeria-fotos {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+
+.foto-galeria {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 35px;
+    box-shadow: 0 6px 15px rgba(80, 20, 40, 0.16);
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+}
+
+.foto-galeria:hover {
+    transform: scale(1.10);
+    box-shadow: 0 12px 25px rgba(80, 20, 40, 0.25);
+}
+
+.boton-informacion {
+    margin-top: 25px;
+    padding: 12px 28px;
+    border: none;
+    border-radius: 22px;
+    background: #8e2748;
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+.boton-informacion:hover {
+    background: #e27a9b;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   NOSOTROS
+========================================================= */
+
+#nosotros {
+    width: 90%;
+    max-width: 1150px;
+    margin: 50px auto;
+}
+
+#tit1 {
+    text-align: center;
+    font-size: 42px;
+    color: #6e1735;
+    margin-bottom: 40px;
+}
+
+
+/* BLOQUES NOSOTROS, MISIÓN Y VISIÓN */
+
+#marco1,
+#marco2,
+#marco3 {
+    background: white;
+    border-radius: 30px;
+    padding: 30px;
+    margin-bottom: 30px;
+    display: flex;
+    align-items: center;
+    gap: 40px;
+    box-shadow: 0 7px 20px rgba(80, 20, 40, 0.12);
+    border: 1px solid #f1cbd6;
+}
+
+#marco1 img,
+#marco2 img,
+#marco3 img {
+    width: 220px;
+    height: 220px;
+    object-fit: cover;
+    border-radius: 50%;
+    flex-shrink: 0;
+    transition: transform 0.4s ease;
+}
+
+#marco1 img:hover,
+#marco2 img:hover,
+#marco3 img:hover {
+    transform: scale(1.10);
+}
+
+.texto-nosotros {
+    flex: 1;
+}
+
+.texto-nosotros h2 {
+    color: #7a1e3d;
+    font-size: 28px;
+    margin-bottom: 12px;
+}
+
+.texto-nosotros p {
+    color: #65434d;
+    font-size: 17px;
+}
+
+
+/* PRINCIPIOS */
+
+.prin {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-top: 40px;
+}
+
+.principio {
+    background: white;
+    padding: 30px 22px;
+    text-align: center;
+    border-radius: 28px;
+    border: 1px solid #f1cbd6;
+    box-shadow: 0 7px 20px rgba(80, 20, 40, 0.12);
+    transition: transform 0.3s ease;
+}
+
+.principio:hover {
+    transform: translateY(-7px);
+}
+
+.principio h2 {
+    color: #7a1e3d;
+    margin-bottom: 12px;
+}
+
+.principio i {
+    font-size: 30px;
+    color: #c94d72;
+    margin-bottom: 12px;
+}
+
+.principio p {
+    color: #65434d;
+}
+
+
+/* =========================================================
+   REGISTRO / CONTACTO
+========================================================= */
+
+#registrar {
+    min-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 60px 20px;
+}
+
+#contenedor {
+    width: 100%;
+    max-width: 600px;
+}
+
+#formulario {
+    background: white;
+    padding: 40px;
+    border-radius: 30px;
+    box-shadow: 0 10px 30px rgba(80, 20, 40, 0.15);
+    border: 1px solid #f1cbd6;
+}
+
+#formulario h2 {
+    text-align: center;
+    font-size: 32px;
+    color: #6e1735;
+    margin-bottom: 25px;
+}
+
+#campos {
+    display: flex;
+    flex-direction: column;
+}
+
+#campos label {
+    color: #6e1735;
+    font-weight: bold;
+    margin-bottom: 7px;
+    margin-top: 15px;
+}
+
+#campos input,
+#campos select,
+#campos textarea {
+    width: 100%;
+    border: 1px solid #e2aabd;
+    border-radius: 15px;
+    padding: 13px 15px;
+    font-family: inherit;
+    font-size: 15px;
+    color: #4a2631;
+    background: #fff8fa;
+    outline: none;
+    transition: 0.3s ease;
+}
+
+#campos input:focus,
+#campos select:focus,
+#campos textarea:focus {
+    border-color: #9f3155;
+    box-shadow: 0 0 0 3px rgba(159, 49, 85, 0.12);
+}
+
+#campos textarea {
+    min-height: 140px;
+    resize: vertical;
+}
+
+#campos button {
+    margin-top: 25px;
+    padding: 14px;
+    border: none;
+    border-radius: 25px;
+    background: #8e2748;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+#campos button:hover {
+    background: #e27a9b;
+    transform: translateY(-3px);
+}
+
+
+/* =========================================================
+   EFECTO GENERAL PARA IMÁGENES
+========================================================= */
+
+img {
+    max-width: 100%;
+}
+
+
+/* =========================================================
+   ADAPTACIÓN PARA CELULARES
+========================================================= */
+
+@media (max-width: 900px) {
+
+    header {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    #navegacion {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    #principal {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #foto-principal {
+        width: 330px;
+        height: 330px;
+    }
+
+    #contenedor-tiendas {
+        grid-template-columns: 1fr;
+    }
+
+    .prin {
+        grid-template-columns: 1fr;
+    }
+
+    #marco1,
+    #marco2,
+    #marco3 {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #marco1 img,
+    #marco2 img,
+    #marco3 img {
+        width: 190px;
+        height: 190px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+    #empresa {
+        font-size: 23px;
+    }
+
+    #navegacion {
+        gap: 5px;
+    }
+
+    #navegacion li a {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+
+    #info1 h1 {
+        font-size: 35px;
+    }
+
+    #texto1 {
+        font-size: 18px;
+    }
+
+    #foto-principal {
+        width: 280px;
+        height: 280px;
+    }
+
+    #titulo-tiendas,
+    #imagenes > h1,
+    #tit1 {
+        font-size: 32px;
+    }
+
+    .foto-galeria {
+        width: 180px;
+        height: 180px;
+    }
+
+    #formulario {
+        padding: 25px;
+    }
+
+}

@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>CuNorts</title>
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <link rel="icon" href="Imagenes/fotologo.jpeg" type="image/png">
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" 
+    integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" 
+    crossorigin="anonymous" 
+    referrerpolicy="no-referrer" />
+</head>
+
+<body>
+
+<header>
+
+    <div id="logo">
+
+        <p id="empresa">CUNORTS</p>
+
+        <img 
+            id="fotologo" 
+            src="Imagenes/fotologo.jpeg" 
+            alt="Logo de CuNorts"
+        >
+
+    </div>
+
+    <nav id="tiendas">
+
+        <ul id="navegacion">
+
+            <li><a href="index.html">Inicio</a></li>
+
+            <li><a href="tiendas.html">Tiendas</a></li>
+
+            <li><a href="nosotros.html">Nosotros</a></li>
+
+            <li><a href="galeria.html">Galería</a></li>
+
+            <li><a href="registro.html">Registro</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+
+<section id="registrar">
+
+    <div id="contenedor">
+
+        <form action="" id="formulario">
+
+            <h2>Contáctanos</h2>
+
+            <div id="campos">
+
+                <label for="nombre">Nombre</label>
+
+                <input 
+                    type="text" 
+                    id="nombre" 
+                    placeholder="Ingrese su nombre" 
+                    required
+                >
+
+
+                <label for="emprendimiento">
+                    ¿A qué emprendimiento desea contactar?
+                </label>
+
+                <select id="emprendimiento" required>
+
+                    <option value="">
+                        Seleccione un emprendimiento
+                    </option>
+
+                    <option value="panchi">
+                        PanchiPasteles
+                    </option>
+
+                    <option value="surtimoda">
+                        SurtiModa
+                    </option>
+
+                    <option value="caliglam">
+                        CaliGlam
+                    </option>
+
+                </select>
+
+
+                <label for="mensaje">Mensaje</label>
+
+                <textarea 
+                    id="mensaje" 
+                    placeholder="Escriba su mensaje" 
+                    required
+                ></textarea>
+
+
+                <button type="submit">
+                    Enviar mensaje
+                </button>
+
+            </div>
+
+        </form>
+
+    </div>
+
+</section>
+
+
+<footer>
+
+    <p id="final">Visita nuestras redes sociales</p>
+
+    <div id="iconos">
+
+        <i class="fa-brands fa-whatsapp fa-2x"></i>
+
+        <i class="fa-brands fa-facebook fa-2x"></i>
+
+        <i class="fa-brands fa-x-twitter fa-2x"></i>
+
+        <i class="fa-brands fa-instagram fa-2x"></i>
+
+        <i class="fa-brands fa-tiktok fa-2x"></i>
+
+    </div>
+
+</footer>
+
+
+<script>
+
+let parametros = new URLSearchParams(window.location.search);
+
+let emprendimientoSeleccionado = parametros.get("emprendimiento");
+
+if (emprendimientoSeleccionado) {
+
+    document.getElementById("emprendimiento").value =
+        emprendimientoSeleccionado;
+
+}
+
+
+document.getElementById("formulario").addEventListener("submit", function(event) {
+
+    event.preventDefault();
+
+    let nombre = document.getElementById("nombre").value;
+
+    let mensaje = document.getElementById("mensaje").value;
+
+    let emprendimiento =
+        document.getElementById("emprendimiento").value;
+
+
+    let numeros = {
+
+        panchi: "573227223634",
+
+        surtimoda: "573114707095",
+
+        caliglam: "573028140846"
+
+    };
+
+
+    let numero = numeros[emprendimiento];
+
+
+    if (!numero) {
+
+        alert("Seleccione un emprendimiento.");
+
+        return;
+
+    }
+
+
+    let texto =
+        "Hola, Quiero información!\n\n" +
+        "Nombre: " + nombre + "\n" +
+        "Mensaje: " + mensaje;
+
+
+    window.open(
+
+        "https://wa.me/" +
+        numero +
+        "?text=" +
+        encodeURIComponent(texto),
+
+        "_blank"
+
+    );
+
+});
+
+</script>
+
+</body>
+
+</html>
